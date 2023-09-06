@@ -49,7 +49,6 @@ namespace Spatial
                 }
         }
 
-
         /// <summary>
         /// Get all data at this world position
         /// </summary>
@@ -98,7 +97,7 @@ namespace Spatial
             foreach (var kvp in _parition)
                 kvp.Value.Remove(element);
         }
-        public int GetKey(in int gridX, in int gridY)
+        int GetKey(in int gridX, in int gridY)
         {
             unchecked
             {
