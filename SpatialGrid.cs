@@ -102,10 +102,9 @@ namespace Spatial
         {
             unchecked
             {
-                int hashcode = 3;
-                hashcode = (hashcode * 7) + gridX;
-                hashcode = (hashcode * 7) + gridY;
-                return hashcode;
+                //110,000 provides zero collisions for grid range of -5000 to 5000
+                //0 collisions of 100000000 grid tiles.
+                return gridX + gridY * 110000;
             }
         }
         void GetBounds(T element, out int mX, out int mY, out int mxX, out int mxY)
