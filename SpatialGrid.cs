@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Spatial
 {
-    public class SpatialGrid<T> where T : IBounds
+    public sealed class SpatialGrid<T> where T : IBounds
     {
         double _gridSizeX;
         double _gridSizeY;
