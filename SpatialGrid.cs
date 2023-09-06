@@ -8,10 +8,8 @@ namespace Spatial
         double _gridSizeX;
         double _gridSizeY;
         Dictionary<int, List<T>> _parition;
-
         public T this[int gridX, int gridY, int index] => _parition[GetKey(gridX, gridY)][index];
         public IReadOnlyList<T> this[int gridX, int gridY] => _parition[GetKey(gridX, gridY)];
-
         public SpatialGrid(in double gridSizeX, in double gridSizeY)
         {
             if (gridSizeX <= 0 || gridSizeY <= 0)
@@ -21,7 +19,6 @@ namespace Spatial
             _gridSizeY = gridSizeY;
             _parition = new Dictionary<int, List<T>>(8);
         }
-
         public void Add(T element)
         {
             GetBounds(element, out var minX, out var minY, out var maxX, out var maxY);
@@ -36,7 +33,6 @@ namespace Spatial
                     _parition[key].Add(element);
                 }
         }
-
         public void Remove(in T element)
         {
             GetBounds(element, out var minX, out var minY, out var maxX, out var maxY);
