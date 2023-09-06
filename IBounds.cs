@@ -6,6 +6,5 @@
         public double MinY { get; }
         public double MaxX { get; }
         public double MaxY { get; }
-
     }
 }
