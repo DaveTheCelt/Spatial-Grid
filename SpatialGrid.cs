@@ -49,8 +49,7 @@ namespace Spatial
                         Remove(list, element);
                 }
         }
-        //override provided for those who want to use a fast element removal via threading
-        protected virtual void Remove(List<T> list, T element) => list.Remove(element);
+        void Remove(List<T> list, T element) => list.Remove(element);
         int GetKey(in int gridX, in int gridY) => gridX + 3 * gridY;
         void GetBounds(in T element, out int minX, out int minY, out int maxX, out int maxY)
         {
